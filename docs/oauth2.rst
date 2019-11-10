@@ -18,12 +18,11 @@ Using Signed Credentials
 
 1. Head to `Google Developers Console <https://console.developers.google.com/project>`_ and create a new project (or select the one you have.)
 
-2. Under "API & auth", in the API enable "Drive API".
+2. Under "APIs & Services > Library", search for "Drive API" and enable it.
+    
+3. Under "APIs & Services > Library", search for "Sheets API" and enable it.
 
-.. image:: https://cloud.githubusercontent.com/assets/264674/7033107/72b75938-dd80-11e4-9a9f-54fb10820976.png
-    :alt: Enabled APIs
-
-3. Go to "Credentials" and choose "New Credentials > Service Account Key".
+4. Go to "Credentials" and choose "New Credentials > Service Account Key".
 
 .. image:: https://cloud.githubusercontent.com/assets/1297699/12098271/1616f908-b319-11e5-92d8-767e8e5ec757.png
     :alt: Google Developers Console
@@ -47,7 +46,7 @@ This is how this file may look like:
 
 In the next step you'll need the value of *client_email* from the file.
 
-4. Go to your spreadsheet and share it with a *client_email* from the step above. Otherwise you'll get a ``SpreadsheetNotFound`` exception when trying to access this spreadsheet with gspread.
+4. Go to your spreadsheet and share it with a *client_email* from the step above. Otherwise you'll get a ``gspread.exceptions.SpreadsheetNotFound`` exception when trying to access this spreadsheet with gspread.
 
 5. Install `oauth2client <https://github.com/google/oauth2client>`_:
 
